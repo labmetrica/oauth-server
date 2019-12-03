@@ -1,11 +1,9 @@
-package com.metrica.formacion.oauthserver.config;
+package com.metrica.formacion.oauthserver.Config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -14,19 +12,16 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.servlet.http.HttpServletResponse;
 
 @Configuration
-@EnableWebSecurity
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
-    @Qualifier("usuariosSecurityService")
+    @Qualifier("usuariosDetailsServiceImple")
     private UserDetailsService userDetailsService;
-
-    @Autowired
-    private JwtConfig jwtConfig;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
@@ -50,15 +45,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
     public void configure(HttpSecurity http) throws Exception {
 
         http
-                .csrf().disable()
-                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                    .exceptionHandling().authenticationEntryPoint((req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
-                .and()
-                    .addFilter(new JWTUsernameAndPasswordFilter(authenticationManager(), jwtConfig))
-                .authorizeRequests().antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
-                .anyRequest().authenticated();
-
+                .authorizeRequests()
+                .antMatchers("/login").permitAll()
+                .antMatchers("/oauth/**").permitAll()
+                .anyRequest().authenticated()
+                .and().formLogin().permitAll()
+                .and().csrf().disable();
 
         /*http.authorizeRequests().anyRequest().authenticated().and()
                 .csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);*/
