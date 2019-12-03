@@ -4,8 +4,8 @@ import com.metrica.formacion.oauthserver.JWT.JwtRSAkey;
 import com.metrica.formacion.oauthserver.entity.UserCredentials;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.extern.log4j.Log4j2;
 import org.codehaus.jackson.map.ObjectMapper;
-import org.graalvm.compiler.lir.LIRInstruction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -26,10 +26,11 @@ import java.util.stream.Collectors;
 
 public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
-    @Autowired
     private AuthenticationManager authenticationManager;
 
-    public JwtUsernameAndPasswordAuthenticationFilter() {
+    public JwtUsernameAndPasswordAuthenticationFilter(AuthenticationManager authenticationManager) {
+
+        this.authenticationManager = authenticationManager;
 
         this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/auth","POST"));
     }
@@ -50,7 +51,6 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
 
             throw new RuntimeException(e);
         }
-
     }
 
     @Override
@@ -65,7 +65,7 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
                         .map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
                 .setIssuedAt(new Date(now))
                 .setExpiration(new Date(now + 3600 * 1000))  // in milliseconds
-                .signWith(SignatureAlgorithm.HS512, JwtRSAkey.RSA_PRIVADA.getBytes())
+                .signWith(SignatureAlgorithm.HS512, JwtRSAkey.RSA_PUBLICA.getBytes())
                 .compact();
 
         response.addHeader("Authorization", "Bearer" + token);
