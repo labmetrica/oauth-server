@@ -42,4 +42,6 @@ public class UsuariosDetailsServiceImple implements UserDetailsService {
         return new User(usuario.getUsername(),usuario.getPassword(),usuario.isActivo(),
                 true,true,true,grantedAuthorities);
     }
+
+
 }

@@ -1,6 +1,7 @@
 package com.metrica.formacion.oauthserver.Config;
 
 import com.metrica.formacion.oauthserver.security.JwtUsernameAndPasswordAuthenticationFilter;
+import com.metrica.formacion.oauthserver.security.corsFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,8 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.session.SessionManagementFilter;
+import org.springframework.web.filter.CorsFilter;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -32,6 +35,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
         return new BCryptPasswordEncoder();
     }
 
+    @Bean
+    public corsFilter corsFilter(){
+
+        return new corsFilter();
+    }
+
     @Override
     @Autowired
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -43,12 +52,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 
         http
                 .csrf().disable()
+                .addFilterBefore(corsFilter(), SessionManagementFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                     .exceptionHandling().authenticationEntryPoint((req, rsp, e)-> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
                 .and()
                     .addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager())).authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/auth").permitAll();
+                .antMatchers(HttpMethod.POST, "/auth/**").permitAll()
+                .antMatchers(HttpMethod.POST,"/user").hasRole("ADMIN");
 ;
         /*http.authorizeRequests().anyRequest().authenticated().and()
                 .csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);*/
