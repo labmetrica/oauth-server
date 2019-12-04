@@ -32,9 +32,8 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
 
         this.authenticationManager = authenticationManager;
 
-        this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/auth","POST"));
+        this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/auth/**","POST"));
     }
-
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
@@ -68,6 +67,6 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
                 .signWith(SignatureAlgorithm.HS512, JwtRSAkey.RSA_PUBLICA.getBytes())
                 .compact();
 
-        response.addHeader("Authorization", "Bearer" + token);
+        response.addHeader("Authorization", token);
     }
 }
