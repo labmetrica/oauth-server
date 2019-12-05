@@ -1,4 +1,4 @@
-package com.metrica.formacion.oauthserver.config;
+package com.metrica.formacion.oauthserver.JWT;
 
 public class JwtRSAkey {
 

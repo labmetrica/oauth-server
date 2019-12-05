@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Log4j2
 @Service
-public class usuariosSecurityService implements UserDetailsService {
+public class UsuariosDetailsServiceImple implements UserDetailsService {
 
     @Autowired
     private com.metrica.formacion.oauthserver.dao.usuariosRepository usuariosRepository;
@@ -37,7 +37,11 @@ public class usuariosSecurityService implements UserDetailsService {
                 .peek(authority -> log.info("role: " + authority.getAuthority()))
                 .collect(Collectors.toList());
 
+        log.info("load user");
+
         return new User(usuario.getUsername(),usuario.getPassword(),usuario.isActivo(),
                 true,true,true,grantedAuthorities);
     }
+
+
 }

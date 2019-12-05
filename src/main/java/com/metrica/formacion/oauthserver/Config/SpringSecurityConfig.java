@@ -1,8 +1,9 @@
-package com.metrica.formacion.oauthserver.config;
+package com.metrica.formacion.oauthserver.Config;
 
+import com.metrica.formacion.oauthserver.security.JwtUsernameAndPasswordAuthenticationFilter;
+import com.metrica.formacion.oauthserver.security.corsFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -14,6 +15,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.session.SessionManagementFilter;
+import org.springframework.web.filter.CorsFilter;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -22,16 +26,19 @@ import javax.servlet.http.HttpServletResponse;
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
-    @Qualifier("usuariosSecurityService")
+    @Qualifier("usuariosDetailsServiceImple")
     private UserDetailsService userDetailsService;
-
-    @Autowired
-    private JwtConfig jwtConfig;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
 
         return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public corsFilter corsFilter(){
+
+        return new corsFilter();
     }
 
     @Override
@@ -40,26 +47,19 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
         auth.userDetailsService(this.userDetailsService).passwordEncoder(passwordEncoder());
     }
 
-    @Bean
-    @Override
-    protected AuthenticationManager authenticationManager() throws Exception {
-        return super.authenticationManager();
-    }
-
     @Override
     public void configure(HttpSecurity http) throws Exception {
 
         http
                 .csrf().disable()
-                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                    .exceptionHandling().authenticationEntryPoint((req, rsp, e) -> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
+                    .exceptionHandling().authenticationEntryPoint((req, rsp, e)-> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
                 .and()
-                    .addFilter(new JWTUsernameAndPasswordFilter(authenticationManager(), jwtConfig))
-                .authorizeRequests().antMatchers(HttpMethod.POST, jwtConfig.getUri()).permitAll()
-                .anyRequest().authenticated();
-
-
+                    .addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager())).authorizeRequests()
+                .antMatchers(HttpMethod.POST, "/auth/**").permitAll()
+                .antMatchers("/user/**").permitAll();
+;
         /*http.authorizeRequests().anyRequest().authenticated().and()
                 .csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);*/
     }
