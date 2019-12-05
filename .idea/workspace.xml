@@ -4,12 +4,8 @@
     <bookmark url="file://$USER_HOME$/Downloads/TEST/microservices-spring-boot/spring-eureka-zuul/src/main/resources/application.properties" description="zuul.routes.auth-service.path=/auth/**&#10;zuul.routes..." line="17" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="065b9921-3ec5-465f-96af-9099bc21fde1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java" afterDir="false" />
+    <list default="true" id="065b9921-3ec5-465f-96af-9099bc21fde1" name="Default Changelist" comment="login establecido en /auth">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="15" column="152" lean-forward="true" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
+            <state relative-caret-position="186">
+              <caret line="15" column="152" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -200,7 +196,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -384,7 +380,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575544316079" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575546912844" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -445,7 +441,7 @@
       <workItem from="1575358918824" duration="6241000" />
       <workItem from="1575366618696" duration="2496000" />
       <workItem from="1575444864779" duration="18459000" />
-      <workItem from="1575537295414" duration="3027000" />
+      <workItem from="1575537295414" duration="5406000" />
     </task>
     <task id="LOCAL-00001" summary="n/a">
       <created>1575360348315</created>
@@ -482,17 +478,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575535163958</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="login establecido en /auth">
+      <created>1575544338459</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575544338459</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76877000" />
+    <option name="totallyTimeSpent" value="79256000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29321662" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14285715" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -503,7 +506,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989083" visible="true" weight="0.4284141" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989083" visible="true" weight="0.4242094" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -767,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="152" lean-forward="true" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
+        <state relative-caret-position="186">
+          <caret line="15" column="152" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
