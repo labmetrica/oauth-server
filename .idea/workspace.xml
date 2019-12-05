@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="065b9921-3ec5-465f-96af-9099bc21fde1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,17 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+            <state relative-caret-position="240">
+              <caret line="59" column="80" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/usuariosRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="132">
+              <caret line="15" column="152" lean-forward="true" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,7 +45,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/usuarios.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="495">
               <caret line="37" selection-start-line="37" selection-end-line="38" />
             </state>
           </provider>
@@ -65,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+            <state relative-caret-position="435">
+              <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -77,7 +79,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/rolesRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="75">
               <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -89,17 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="19" column="45" selection-start-line="19" selection-end-line="19" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="306">
+              <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,18 +103,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/UserCredentials.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="300">
               <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#257#258#0" expanded="true" />
-                <element signature="e#288#289#0" expanded="true" />
                 <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#442#443#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
                 <element signature="e#490#491#0" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#521#522#0" expanded="true" />
                 <element signature="e#639#640#0" expanded="true" />
                 <element signature="e#664#665#0" expanded="true" />
                 <element signature="e#701#702#0" expanded="true" />
@@ -138,7 +127,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosDetailsServiceImple.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
+            <state relative-caret-position="480">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -195,10 +184,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosDetailsServiceImple.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosServiceImple.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/UserCredentials.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java" />
       </list>
     </option>
@@ -210,8 +200,8 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -221,7 +211,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -313,11 +303,78 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="metrica" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="metrica" type="462c0819:PsiDirectoryNode" />
+              <item name="formacion" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="metrica" type="462c0819:PsiDirectoryNode" />
+              <item name="formacion" type="462c0819:PsiDirectoryNode" />
+              <item name="oauthserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="metrica" type="462c0819:PsiDirectoryNode" />
+              <item name="formacion" type="462c0819:PsiDirectoryNode" />
+              <item name="oauthserver" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oauth-server" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oauth-server" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="metrica" type="462c0819:PsiDirectoryNode" />
+              <item name="formacion" type="462c0819:PsiDirectoryNode" />
+              <item name="oauthserver" type="462c0819:PsiDirectoryNode" />
+              <item name="security" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +384,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575535150386" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1575544316079" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -387,7 +444,8 @@
       <workItem from="1575292208358" duration="2713000" />
       <workItem from="1575358918824" duration="6241000" />
       <workItem from="1575366618696" duration="2496000" />
-      <workItem from="1575444864779" duration="17419000" />
+      <workItem from="1575444864779" duration="18459000" />
+      <workItem from="1575537295414" duration="3027000" />
     </task>
     <task id="LOCAL-00001" summary="n/a">
       <created>1575360348315</created>
@@ -417,17 +475,24 @@
       <option name="project" value="LOCAL" />
       <updated>1575476215640</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="login establecido en /auth">
+      <created>1575535163958</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575535163958</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72810000" />
+    <option name="totallyTimeSpent" value="76877000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23880596" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29321662" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,7 +503,7 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4989083" visible="true" weight="0.4242094" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4989083" visible="true" weight="0.4284141" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -512,7 +577,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java</url>
-          <line>46</line>
+          <line>51</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -600,20 +665,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosDetailsServiceImple.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/usuariosRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        <state relative-caret-position="75">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/usuarios.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="19" column="45" selection-start-line="19" selection-end-line="19" selection-end-column="45" />
+        <state relative-caret-position="495">
+          <caret line="37" selection-start-line="37" selection-end-line="38" />
         </state>
       </provider>
     </entry>
@@ -628,27 +693,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/usuarios.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="37" selection-start-line="37" selection-end-line="38" />
+        <state relative-caret-position="435">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/rolesRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/entity/UserCredentials.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="300">
           <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
             <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#442#443#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
             <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
             <element signature="e#664#665#0" expanded="true" />
             <element signature="e#701#702#0" expanded="true" />
@@ -661,40 +745,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/rolesRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/service/UsuariosDetailsServiceImple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="480">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/dao/usuariosRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/JwtUsernameAndPasswordAuthenticationFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        <state relative-caret-position="306">
+          <caret line="32" column="59" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/security/corsFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/CorsFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        <state relative-caret-position="132">
+          <caret line="15" column="152" lean-forward="true" selection-start-line="15" selection-start-column="152" selection-end-line="15" selection-end-column="152" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -703,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/metrica/formacion/oauthserver/Config/SpringSecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="60" column="52" selection-start-line="60" selection-start-column="52" selection-end-line="60" selection-end-column="52" />
+        <state relative-caret-position="240">
+          <caret line="59" column="80" selection-start-line="59" selection-start-column="80" selection-end-line="59" selection-end-column="80" />
         </state>
       </provider>
     </entry>
