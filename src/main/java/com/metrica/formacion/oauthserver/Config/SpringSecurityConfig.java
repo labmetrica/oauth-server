@@ -52,14 +52,13 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 
         http
                 .csrf().disable()
-                .addFilterBefore(corsFilter(), SessionManagementFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                     .exceptionHandling().authenticationEntryPoint((req, rsp, e)-> rsp.sendError(HttpServletResponse.SC_UNAUTHORIZED))
                 .and()
                     .addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager())).authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/auth/**").permitAll()
-                .antMatchers(HttpMethod.POST,"/user").hasRole("ADMIN");
+                .antMatchers("/user/**").permitAll();
 ;
         /*http.authorizeRequests().anyRequest().authenticated().and()
                 .csrf().disable().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);*/
