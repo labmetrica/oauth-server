@@ -31,7 +31,6 @@ public class JwtUsernameAndPasswordAuthenticationFilter extends UsernamePassword
     public JwtUsernameAndPasswordAuthenticationFilter(AuthenticationManager authenticationManager) {
 
         this.authenticationManager = authenticationManager;
-
         this.setRequiresAuthenticationRequestMatcher(new AntPathRequestMatcher("/auth/**","POST"));
     }
     @Override
